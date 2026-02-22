@@ -39,6 +39,7 @@ body {
 
 .hero-title {
   font-size: clamp(4rem, 15vw, 18rem);
+  color: var(--accent-beige);
   margin: 0;
   line-height: 1;
   background: none; /* ← 緑消す */
@@ -49,6 +50,7 @@ body {
 /* サブタイトルはヒーローの底に配置 */
 .hero-subwrap {
   margin-top: 1px; /* タイトルと距離をとる */
+  color: var(--accent-beige);
   /* background: rgba(255, 0, 0, 0.2); デバッグ用の赤い背景 */
 }
 
@@ -100,16 +102,14 @@ body {
 /* ===セクション===*/
 
 /* セクション（前景レイヤー） */
-.section-wrapper{
-  /* position: relative; */
-  /* z-index: 10; 背景タイトルより前に出す */
-}
+
 
 
 .section {
   max-width: var(--section-max-width);
   margin-left: 120px;
   margin-right: auto;
+  
   padding: 160px 20px 80px;
   background: transparent;
   border-radius: 0;
