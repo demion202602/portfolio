@@ -5,49 +5,25 @@
 :root {
   --bg-gray: #5e5e5e;
   --text-white: #f5f5f5;
-
-  /* アクセント階層（昼モードは静かな差） */
-  --accent-beige: #e0d3a0; /* 最上位：大見出し */
-  --accent-soft: #d6c79a; /* 中位：セクションタイトル */
-  --accent-weak: #c7b98c; /* 下位：小見出し */
-
+  --accent-beige: #e0d3a0;
   --section-max-width: 900px;
-  --section-padding: 60px 20px;
-  --line-height: 1.8;
-  --title-weight: 700;
 }
 
 /* ===== 全体 ===== */
 body {
   background-color: var(--bg-gray);
   color: var(--text-white);
-  font-family: "Noto Sans JP", sans-serif;
-  line-height: var(--line-height);
   margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 0;
+  font-family: "Noto Sans JP", sans-serif;
 }
-
 /* ===== HERO ===== */
-/* .hero {
-  background-color: var(--bg-gray);
-  text-align: left;
-  padding: 120px 20px 80px; /* 上に大きく余白を取る */
-/* max-width: var(--section-max-width);
-  margin: auto;
-  position: relative;
-} */
 
 .hero {
-  min-height: 100vh; /* 一枚の絵のように全画面にする */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* タイトルを画面下に寄せる */
-  padding: 0 20px 40px; /*上部余白なし*/
-  position: relative;
-  z-index: 20; /* 上部の方に重ねる */
-  background-color: var(--bg-gray);
+  justify-content: flex-end;
+  padding: 0 20px 40px;
 }
 
 .hero::after {
@@ -70,7 +46,6 @@ body {
   font-size: clamp(4rem, 15vw, 18rem); /* 画面幅に応じて巨大化 */
   font-weight: 700;
   color: var(--accent-beige);
-  margin: 0;
   line-height: 0.85; /* かっこいい圧縮感 */
 }
 
@@ -80,34 +55,55 @@ body {
 }
 
 .hero-sub {
+  margin-top: 16px;
   font-size: clamp(1rem, 2.5vw, 1.6rem);
-  color: var(--accent-beige);
   opacity: 0.9;
-  margin: 0;
+  color: var(--accent-beige);
 }
 
-/* ===== SECTION（共通） ===== */
+/* ===== Section wrapper  ===== */
+.section-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto 160px;
+  padding: 0 20px;
+}
+
+/* ===== sticky背景文字 ===== */
+.bg-title {
+  position: sticky;
+  top: 120px; /* ← セクション内で追従する高さ */
+  text-align: right; /* PCでは右寄せ */
+  width: 100%;
+  font-size: clamp(6rem, 20vw, 16rem);
+  line-height: 0.85;
+  font-weight: 700;
+  color: rgba(224, 211, 160, 0.12);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1.2s ease; /* フェードイン */
+}
+.bg-title.show {
+  opacity: 0.12; /* 元の色 */
+}
+
+/* ===セクション===*/
 .section {
   max-width: var(--section-max-width);
-  /* margin: auto; */
-  margin-top: 0;
-  /* padding: var(--section-padding); */
-  padding: 120px 20px 60px; /*　必要なら padding に置き換える*/
-  /* わずかな背景差で読みやすさUP */
-  /* background: rgba(255, 255, 255, 0.03); */
-  background-color: var(--bg-gray); /*完全同色*/
+  margin: 0 auto;
+  padding: 160px 20px 80px;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
-
   position: relative;
-  z-index: 10; /* 背景タイトルより前 */
+  z-index: 10;
 }
 
-/* ===== ABOUT / PERSONA ===== */
+/*=== Titles ===*/
 .section-title {
   font-size: clamp(1.6rem, 4.5vw, 2.2rem);
-  font-weight: var(--title-weight);
-  color: var(--accent-soft);
-  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--accent-beige);
 }
 
 .section-subtitle {
@@ -150,34 +146,10 @@ body {
    Background Title System
    ========================= */
 
-.bg-title {
-  position: fixed;
-  top: 22%; /*画面への上からの被り具合 */
-  right: -1%; /*右寄せ*/
-  left: auto; /* 左を無効化 */
-  transform: translateY(-40%);
-  text-align: right; /*背景右寄せ*/
-  font-size: 18vw; /* 巨大文字 */
-  font-weight: 700;
-  line-height: 0.9;
-  color: rgba(224, 211, 160, 0.12); /* 昼モードの淡いベージュ */
-  z-index: 1;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-  opacity: 1; /* 後でスクロール連動にも対応 */
-}
-
 /* セクション（前景レイヤー） */
-.section {
-  text-align: left;
+.section-wrapper .section {
   position: relative;
   z-index: 10; /* 背景タイトルより前に出す */
-  max-width: var(--section-max-width);
-  margin-right: auto; /*全体を左寄せ*/
-  margin-left: 12rem; /*画面左から少し余白*/
-  padding: var(--section-padding);
-  background: rgba(255, 255, 255, 0.03); /* 昼モードの淡背景 */
-  border-radius: 8px;
 }
 
 /* ABOUTの箇条書きを整える */

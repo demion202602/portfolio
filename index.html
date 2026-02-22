@@ -1,197 +1,213 @@
 <!doctype html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Linux MintとVSCodeで構築した、私の制作実績をまとめたポートフォリオサイトです。PHPやLaravelを用いたWeb開発の学習プロセスを公開しています。"
+    />
+    <meta property="og:title" content="私のポートフォリオ" />
+    <meta
+      property="og:description"
+      content="私の開発プロセスと作品集をご覧ください。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="あなたのサイトのURL" />
+    <meta property="og:image" content="サムネイル画像のURL" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Portfolio - Day Mode</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Linux MintとVSCodeで構築した、私の制作実績をまとめたポートフォリオサイトです。PHPやLaravelを用いたWeb開発の学習プロセスを公開しています。" />
-  <meta property="og:title" content="私のポートフォリオ" />
-  <meta property="og:description" content="私の開発プロセスと作品集をご覧ください。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="あなたのサイトのURL" />
-  <meta property="og:image" content="サムネイル画像のURL" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <title>Portfolio - Day Mode</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <script src="js/main.js" defer></script>
+  </head>
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/mobile.css">
-  <script src="js/main.js" defer></script>
-</head>
+  <body>
+    <!-- ===== HERO ===== -->
+    <header id="hero" class="hero">
+      <h1 class="hero-title">My portfolio</h1>
 
-<body>
-  <div class="bg-title">ABOUT<br>ME</div>
-  <!-- ===== HERO ===== -->
-  <header id="hero" class="hero">
-    <h1 class="hero-title">My portfolio</h1>
+      <div class="hero-subwrap">
+        <p class="hero-sub">Structure-Seeker Edition（Day Mode）</p>
+      </div>
+    </header>
 
-    <div class="hero-subwrap">
-      <p class="hero-sub">
-        Structure-Seeker Edition（Day Mode）
-      </p>
+    <!-- ===== ABOUT ===== -->
+    <div class="section-wrapper">
+      <!-- 固定背景タイトル　スクロール追従・項目変化 -->
+      <div class="bg-title">ABOUT</div>
+      <section id="about" class="section" data-bg="ABOUT">
+        <h2 class="section-title">About Me（Day Mode）</h2>
+        <h3 class="section-subtitle">自己紹介</h3>
+
+        <div class="persona-block">
+          <h4 class="persona-title">1. 物事との向き合い方（Boot Sequence）</h4>
+          <p class="persona-text">
+            目の前の業務だけでなく、その背景や目的にも目を向けながら取り組むことを大切にしています。<br />
+            全体を把握したうえで、一つひとつ丁寧に進めるタイプです。
+          </p>
+        </div>
+
+        <div class="persona-block">
+          <h4 class="persona-title">2. 大切にしていること（Architecture）</h4>
+          <p class="persona-text">
+            ・相手の立場や状況を考えて行動すること<br />
+            ・情報を整理し、分かりやすく伝えること<br />
+            ・周囲との認識をそろえながら進めること
+          </p>
+        </div>
+
+        <div class="persona-block">
+          <h4 class="persona-title">3. 仕事をする上での姿勢（Known Issues）</h4>
+          <p class="persona-text">
+            誤解や行き違いを防ぐため、確認やすり合わせを大切にしています。<br />
+            落ち着いた環境の中で、安心して業務を進められる状態づくりを心がけています。
+          </p>
+        </div>
+
+        <div class="persona-block">
+          <h4 class="persona-title">
+            4. 周囲への関わり方（Optimized Features）
+          </h4>
+          <p class="persona-text">
+            チームや関係者と協力しながら、無理のないペースで役割を果たすことを意識しています。<br />
+            一度引き受けたことは、最後まで丁寧に取り組みます。
+          </p>
+        </div>
+
+        <div class="persona-block">
+          <h4 class="persona-title">5. 仕事への考え方（Output Philosophy）</h4>
+          <p class="persona-text">
+            「自分だけが進むのではなく、周囲と一緒に進むこと」<br />
+            「分かりにくさをそのままにせず、安心できる形に整えること」<br />
+            を大切にしています。
+          </p>
+        </div>
+      </section>
     </div>
 
-  </header>
+    <!-- ===== CAREER ===== -->
+    <div class="section-wrapper">
+      <div class="bg-title">CAREER</div>
+      <section id="career" class="section career" data-bg="CAREER">
+        <h2 class="section-title">Career / 資格・学習</h2>
 
-  <!-- ===== ABOUT：昼モード人格 ===== -->
-  <section id="about" class="section about" data-bg="ABOUT">
-    <h2 class="section-title">About Me（Day Mode）</h2>
+        <div class="career-block">
+          <h3 class="career-title">経歴（主要）</h3>
+          <ul class="career-list">
+            <li>PCサポート（ドコモネットトータルサポート）</li>
+            <li>プレカット図面作成（建築）</li>
+            <li>建築現場補助</li>
+          </ul>
+        </div>
 
-    <!-- ===== 昼モード：人柄が伝わる表現 ===== -->
-    <h3 class="section-subtitle">自己紹介</h3>
-
-    <div class="persona-block">
-      <h4 class="persona-title">1. 物事との向き合い方（Boot Sequence）</h4>
-      <p class="persona-text">
-        目の前の業務だけでなく、その背景や目的にも目を向けながら取り組むことを大切にしています。<br>
-        全体を把握したうえで、一つひとつ丁寧に進めるタイプです。
-      </p>
+        <div class="career-block">
+          <h3 class="career-title">資格・学習中</h3>
+          <ul class="career-list">
+            <li>建築CAD検定 2級</li>
+            <li>WordPress（訓練校）</li>
+            <li>PHP / Laravel（訓練校）</li>
+          </ul>
+        </div>
+      </section>
     </div>
 
-    <div class="persona-block">
-      <h4 class="persona-title">2. 大切にしていること（Architecture）</h4>
-      <p class="persona-text">
-        ・相手の立場や状況を考えて行動すること<br />
-        ・情報を整理し、分かりやすく伝えること<br />
-        ・周囲との認識をそろえながら進めること
-      </p>
+    <!-- ===== WORKS ===== -->
+    <div class="section-wrapper">
+      <div class="bg-title">WORKS</div>
+      <section id="works" class="section works" data-bg="WORKS">
+        <h2 class="section-title">Works｜制作実績</h2>
+
+        <div class="work-block">
+          <h3 class="career-title">
+            Laravel診断アプリ（Error Friend｜チーム開発 / 制作中）
+          </h3>
+
+          <p class="persona-text">
+            訓練校のチーム制作として、10問の回答から A/B/C/D
+            に分類される診断アプリを開発しています。
+            質問・選択肢・診断結果をデータベース管理し、管理画面から編集可能な構造を採用しています。
+          </p>
+
+          <h4 class="persona-title">目的と工夫</h4>
+          <p class="persona-text">
+            ・シンプルで扱いやすいUIを意識した設計<br />
+            ・診断内容を差し替えて別用途にも展開できる、柔軟なDB構造<br />
+          </p>
+
+          <h4 class="persona-title">担当範囲</h4>
+          <ul class="career-list">
+            <li>問題文・選択肢のDB取得処理</li>
+            <li>セッションによる回答管理</li>
+            <li>最頻値によるA/B/C/Dの集計ロジック実装</li>
+            <li>診断結果ページの設計</li>
+            <li>BladeテンプレートによるUI構築</li>
+            <li>TailwindCSSでのデザイン調整</li>
+            <li>DB基本設計（questions / choices / error_types）</li>
+          </ul>
+
+          <h4 class="persona-title">使用技術</h4>
+          <ul class="career-list">
+            <li>PHP / Laravel</li>
+            <li>MySQL</li>
+            <li>Blade</li>
+            <li>TailwindCSS</li>
+            <li>Linux Mint + VSCode</li>
+          </ul>
+
+          <h4 class="persona-title">成果・学んだこと</h4>
+          <p class="persona-text">
+            MVC構造への理解が深まり、セッション管理とDB連携を組み合わせた開発経験を得ました。
+            また、チーム開発における役割分担・仕様調整の重要性を実感しました。
+          </p>
+
+          <div class="work-img">（スクリーンショット予定）</div>
+        </div>
+      </section>
     </div>
+    <!-- ===== PROCESS ===== -->
+    <div class="section-wrapper">
+      <div class="bg-title">PROCESS</div>
+      <section id="process" class="section process" data-bg="PROCESS">
+        <h2 class="section-title">Process｜開発プロセス</h2>
 
-    <div class="persona-block">
-      <h4 class="persona-title">3. 仕事をする上での姿勢（Known Issues）</h4>
-      <p class="persona-text">
-        誤解や行き違いを防ぐため、確認やすり合わせを大切にしています。<br>
-        落ち着いた環境の中で、安心して業務を進められる状態づくりを心がけています。
-      </p>
+        <div class="career-block">
+          <h3 class="career-title">1. 開発準備（基礎理解）</h3>
+          <p class="persona-text">
+            LaravelのMVC構造を学び、画面分割やデータの流れを把握することで、アプリ全体の設計をイメージしながら進めました。
+          </p>
+        </div>
+
+        <div class="career-block">
+          <h3 class="career-title">2. データベース設計</h3>
+          <p class="persona-text">
+            questions / choices / error_types
+            の3テーブルを設計し、柔軟に変更可能な構造でマイグレーションを作成しました。
+          </p>
+        </div>
+
+        <div class="career-block">
+          <h3 class="career-title">3. ロジック実装</h3>
+          <p class="persona-text">
+            セッションで回答を保持し、最頻値を判定する集計処理を実装。異なる回答パターンで動作検証を行い、挙動を調整しました。
+          </p>
+        </div>
+
+        <div class="career-block">
+          <h3 class="career-title">4. UI構築</h3>
+          <p class="persona-text">
+            TailwindCSSとBladeを組み合わせ、読みやすさと操作性を重視した画面を作成しました。
+          </p>
+        </div>
+
+        <div class="career-block">
+          <h3 class="career-title">5. チーム開発</h3>
+          <p class="persona-text">
+            管理画面はリーダーが担当し、ユーザー側を自分が担当しました。仕様のすり合わせを丁寧に行い、チーム開発の流れを経験しました。
+          </p>
+        </div>
+      </section>
     </div>
-
-    <div class="persona-block">
-      <h4 class="persona-title">4. 周囲への関わり方（Optimized Features）</h4>
-      <p class="persona-text">
-        チームや関係者と協力しながら、無理のないペースで役割を果たすことを意識しています。<br>
-        一度引き受けたことは、最後まで丁寧に取り組みます。
-      </p>
-    </div>
-
-    <div class="persona-block">
-      <h4 class="persona-title">5. 仕事への考え方（Output Philosophy）</h4>
-      <p class="persona-text">
-        「自分だけが進むのではなく、周囲と一緒に進むこと」<br>
-        「分かりにくさをそのままにせず、安心できる形に整えること」<br>
-        を大切にしています。
-      </p>
-    </div>
-
-  </section>
-
-  <!-- ===== CAREER ===== -->
-  <section id="career" class="section career" data-bg="CAREER">
-    <h2 class="section-title">Career / 資格・学習</h2>
-
-    <div class="career-block">
-      <h3 class="career-title">経歴（主要）</h3>
-      <ul class="career-list">
-        <li>PCサポート（ドコモネットトータルサポート）</li>
-        <li>プレカット図面作成（建築）</li>
-        <li>建築現場補助</li>
-      </ul>
-    </div>
-
-    <div class="career-block">
-      <h3 class="career-title">資格・学習中</h3>
-      <ul class="career-list">
-        <li>建築CAD検定 2級</li>
-        <li>WordPress（訓練校）</li>
-        <li>PHP / Laravel（訓練校）</li>
-      </ul>
-    </div>
-  </section>
-  <!-- ===== WORKS ===== -->
-  <section id="works" class="section works" data-bg="WORKS">
-    <h2 class="section-title">Works｜制作実績</h2>
-
-    <div class="work-block">
-      <h3 class="career-title">Laravel診断アプリ（Error Friend｜チーム開発 / 制作中）</h3>
-
-      <p class="persona-text">
-        訓練校のチーム制作として、10問の回答から A/B/C/D に分類される診断アプリを開発しています。
-        質問・選択肢・診断結果をデータベース管理し、管理画面から編集可能な構造を採用しています。
-      </p>
-
-      <h4 class="persona-title">目的と工夫</h4>
-      <p class="persona-text">
-        ・シンプルで扱いやすいUIを意識した設計<br>
-        ・診断内容を差し替えて別用途にも展開できる、柔軟なDB構造<br>
-      </p>
-
-      <h4 class="persona-title">担当範囲</h4>
-      <ul class="career-list">
-        <li>問題文・選択肢のDB取得処理</li>
-        <li>セッションによる回答管理</li>
-        <li>最頻値によるA/B/C/Dの集計ロジック実装</li>
-        <li>診断結果ページの設計</li>
-        <li>BladeテンプレートによるUI構築</li>
-        <li>TailwindCSSでのデザイン調整</li>
-        <li>DB基本設計（questions / choices / error_types）</li>
-      </ul>
-
-      <h4 class="persona-title">使用技術</h4>
-      <ul class="career-list">
-        <li>PHP / Laravel</li>
-        <li>MySQL</li>
-        <li>Blade</li>
-        <li>TailwindCSS</li>
-        <li>Linux Mint + VSCode</li>
-      </ul>
-
-      <h4 class="persona-title">成果・学んだこと</h4>
-      <p class="persona-text">
-        MVC構造への理解が深まり、セッション管理とDB連携を組み合わせた開発経験を得ました。
-        また、チーム開発における役割分担・仕様調整の重要性を実感しました。
-      </p>
-
-      <div class="work-img">（スクリーンショット予定）</div>
-    </div>
-  </section>
-  <!-- ===== PROCESS ===== -->
-  <section id="process" class="section process" data-bg="PROCESS">
-    <h2 class="section-title">Process｜開発プロセス</h2>
-
-    <div class="career-block">
-      <h3 class="career-title">1. 開発準備（基礎理解）</h3>
-      <p class="persona-text">
-        LaravelのMVC構造を学び、画面分割やデータの流れを把握することで、アプリ全体の設計をイメージしながら進めました。
-      </p>
-    </div>
-
-    <div class="career-block">
-      <h3 class="career-title">2. データベース設計</h3>
-      <p class="persona-text">
-        questions / choices / error_types の3テーブルを設計し、柔軟に変更可能な構造でマイグレーションを作成しました。
-      </p>
-    </div>
-
-    <div class="career-block">
-      <h3 class="career-title">3. ロジック実装</h3>
-      <p class="persona-text">
-        セッションで回答を保持し、最頻値を判定する集計処理を実装。異なる回答パターンで動作検証を行い、挙動を調整しました。
-      </p>
-    </div>
-
-    <div class="career-block">
-      <h3 class="career-title">4. UI構築</h3>
-      <p class="persona-text">
-        TailwindCSSとBladeを組み合わせ、読みやすさと操作性を重視した画面を作成しました。
-      </p>
-    </div>
-
-    <div class="career-block">
-      <h3 class="career-title">5. チーム開発</h3>
-      <p class="persona-text">
-        管理画面はリーダーが担当し、ユーザー側を自分が担当しました。仕様のすり合わせを丁寧に行い、チーム開発の流れを経験しました。
-      </p>
-    </div>
-  </section>
-</body>
-
+  </body>
 </html>

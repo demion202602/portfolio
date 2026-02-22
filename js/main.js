@@ -1,34 +1,30 @@
-console.log("System Online: Fortress JUNK Structure Booted.");
-document.addEventListener("scroll", () => {
-  const bg = document.getElementById("bgTitle");
-  const hero = document.getElementById("hero");
-  const rectHero = hero.getBoundingClientRect();
+const sections = document.querySelectorAll("section");
 
-  // HERO が画面に見えているあいだ → 背景タイトル非表示
-  if (rectHero.bottom > 0) {
-    bg.style.opacity = 0;
-    return;
-  }
-
-  // ↓ ここからはセクションごとの切り替え処理
-  const sections = document.querySelectorAll("section");
-
+window.addEventListener("scroll", () => {
   sections.forEach((sec) => {
     const rect = sec.getBoundingClientRect();
+    const wrapper = sec.closest(".section-wrapper");
+    const bg = wrapper.querySelector(".bg-title");
+    const label = sec.getAttribute("data-bg");
 
-    if (
-      rect.top <= window.innerHeight * 0.4 &&
-      rect.bottom >= window.innerHeight * 0.4
-    ) {
-      const newTitle = sec.dataset.bg;
+    const inView = rect.top <= window.innerHeight * 0.4 && rect.bottom >= 0;
 
-      if (bg.textContent !== newTitle) {
-        bg.style.opacity = 0;
+    if (inView) {
+      bg.textContent = label;
+
+      // ★ 中に入った瞬間 → show が無ければ2秒後に付与
+      if (!bg.classList.contains("show")) {
+        bg.dataset.pending = "true"; // 連続発火防止
         setTimeout(() => {
-          bg.textContent = newTitle;
-          bg.style.opacity = 1;
-        }, 200);
+          if (bg.dataset.pending === "true") {
+            bg.classList.add("show");
+          }
+        }, 1000);
       }
+    } else {
+      // ★ 範囲外に出たら → リセット
+      bg.classList.remove("show");
+      bg.dataset.pending = "false";
     }
   });
 });
