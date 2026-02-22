@@ -88,18 +88,15 @@ body {
   color: rgba(224, 211, 160, 0.1);
   pointer-events: none;
   z-index: 1;
-
-  /* text-align: right; PCでは右寄せ */
-  /* width: 100%; */
-  /* font-size: clamp(6rem, 20vw, 16rem); */
-  /* line-height: 0.85; */
-  /* font-weight: 700; */
-  /* color: rgba(224, 211, 160, 0.12);
-  /* z-index: 1; */
-  /* opacity: 0.12; */
-  /* transition: opacity 1.2s ease; フェードイン */
 }
 
+.bg-title span {
+  display: block;
+}
+
+.bg-title .me{
+  margin-left: clamp(180px,25vw,480px);
+}
 
 /* ===セクション===*/
 
