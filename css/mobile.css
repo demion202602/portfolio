@@ -23,10 +23,22 @@
 ----------------------------------*/
 @media (max-width: 767px) {
   .bg-title {
-    font-size: 32vw;
+    font-size: 22vw;   /* ← 32vw はデカすぎ。22〜25vw が最適 */
+    text-align: center;
+    top: 60px;
+    opacity: 0.10;     /* ← 固定の薄さでOK */
   }
+
+  body {
+    font-size: 14px;   /* ← 本文の巨大化を止める */
+  }
+
   .section {
-    background: rgba(255, 255, 255, 0.05);
-    max-width: 92%;
+    padding: 80px 16px;
+    max-width: 95%;
+  }
+
+  .section-title {
+    font-size: 1.4rem; /* ← スマホで大きすぎる対策 */
   }
 }
