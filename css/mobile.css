@@ -18,6 +18,15 @@
    ③ スマホ（〜767px）
 ----------------------------------*/
 @media (max-width: 767px) {
+  .hero {
+    min-height: 80vh; /* ← ヒーローの高さを縮める */
+  }
+
+ 
+
+  .hero-title {
+    font-size: clamp(2.5rem, 10vw, 5rem); /* ← ヒーローのタイトルも縮める */
+  }
   .bg-title {
     font-size: 22vw;   /* ← 32vw はデカすぎ。22〜25vw が最適 */
     text-align: center;
