@@ -96,6 +96,7 @@ body {
 
 .bg-title .me{
   margin-left: clamp(180px,25vw,480px);
+  margin-top: 0;
 }
 
 /* ===セクション===*/
