@@ -86,6 +86,11 @@ body {
 }
 
 .bg-title .me {
+  display: inline;
+  margin-left: clamp(180px, 25vw, 480px);
+  margin-top: 0;
+}
+.bg-title .cando {
   margin-left: clamp(180px, 25vw, 480px);
   margin-top: 0;
 }
