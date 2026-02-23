@@ -154,15 +154,14 @@ body {
   opacity: 0.95;
 }
 
-/* ===== CAREER ===== */
-.career-title {
+.list-title {
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--accent-weak);
   margin-bottom: 10px;
 }
 
-.career-list li {
+.detail-list li {
   margin-bottom: 6px;
   opacity: 0.95;
 }
