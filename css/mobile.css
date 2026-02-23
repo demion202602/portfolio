@@ -83,7 +83,7 @@
 
   .bg-title {
     font-size: 20vw;     /* 少し大きめでもOK */
-    top: 20px;           /* 上への食い込み防止 */
+    top: 40px;           /* 上への食い込み防止 */
   }
 
   .bg-title .me {
