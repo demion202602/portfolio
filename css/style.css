@@ -17,7 +17,6 @@ body {
   font-family: "Noto Sans JP", sans-serif;
 }
 
-
 /* ===== HERO ===== */
 
 .hero {
@@ -26,18 +25,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
-  /* border: 1px solid orange; デバッグ用の赤い枠 */
+  /* デバッグ用の赤い枠 */
+  border: 1px solid orange;
 }
-
-/* .hero-inner {
-  position: absolute;
-  bottom: 80px; /* ここで上下調整 */
-
-/* left: 20px;  左右の余白 */
-/* right: 20px; */
-/* border: 1px solid #B84A4A; デバッグ用の赤い枠 */
-/* }  */
 
 .hero-title {
   font-size: clamp(4rem, 15vw, 18rem);
@@ -45,15 +35,16 @@ body {
   margin: 0;
   line-height: 1;
   background: none; /* ← 緑消す */
-
-  /* background: rgba(0, 255, 0, 0.2); デバッグ用の緑の背景 */
+  /* デバッグ用の緑の背景 */
+  background: rgba(0, 255, 0, 0.2);
 }
 
 /* サブタイトルはヒーローの底に配置 */
 .hero-subwrap {
   margin-top: 1px; /* タイトルと距離をとる */
   color: var(--accent-beige);
-  /* background: rgba(255, 0, 0, 0.2); デバッグ用の赤い背景 */
+  /* デバッグ用の赤い背景 */
+  background: rgba(255, 0, 0, 0.2);
 }
 
 .hero-sub {
@@ -94,8 +85,8 @@ body {
   display: block;
 }
 
-.bg-title .me{
-  margin-left: clamp(180px,25vw,480px);
+.bg-title .me {
+  margin-left: clamp(180px, 25vw, 480px);
   margin-top: 0;
 }
 
@@ -105,30 +96,30 @@ body {
   max-width: var(--section-max-width);
   margin-left: 120px;
   margin-right: auto;
-  
+
   padding: 120px 40px 80px;
   background: transparent;
   border-radius: 0;
-  
+
   background: rgba(255, 255, 255, 0.05);
   /* border-radius: 8px; */
   position: relative;
   z-index: 10;
 }
 
-.section p{
+.section p {
   line-height: 1.9;
   margin-bottom: 24px;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
-.section li{
+.section li {
   line-height: 1.9;
   margin-bottom: 12px;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
-.section h3{
+.section h3 {
   margin-top: 40px;
   margin-bottom: 16px;
 }

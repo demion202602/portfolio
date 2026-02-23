@@ -35,10 +35,18 @@
 
   .hero{
     min-height: 100vh; /* ← ヒーローの高さを縮める */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-title {
     font-size: clamp(2.2rem, 8vw, 4rem); /* ← ヒーローのタイトルも縮める */
+  }
+  .hero-sub{
+    font-size: 1.1rem; /* ← ヒーローのサブタイトルも縮める */;
   }
 .section {
     padding: 70px 16px;
