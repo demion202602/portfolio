@@ -59,11 +59,12 @@
   }
 
   .bg-title {
-    font-size: 22vw;   /* ← 32vw はデカすぎ。22〜25vw が最適 */
+    font-size: 20vw;   /* 20〜25vw が最適? */
     text-align: center;
     top: 40px;
     line-height: 0.9;
   }
+
 
  
   .bg-title .me {
@@ -81,7 +82,7 @@
   }
 
   .bg-title {
-    font-size: 26vw;     /* 少し大きめでもOK */
+    font-size: 20vw;     /* 少し大きめでもOK */
     top: 20px;           /* 上への食い込み防止 */
   }
 
